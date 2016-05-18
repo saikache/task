@@ -44,7 +44,7 @@
           <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
             <% @side_linkes.each do |section|%>
               <li>
-                <a href="<%=section['section-name'] ? section['section-name'] : ''%>"><%=section['title'] ? section['title'] : ''%> </a>
+                <a href="#"><%=section['title'] ? section['title'] : ''%> </a>
               </li>
             <%end%>
           </ul>
@@ -54,7 +54,7 @@
           <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
             <% @side_linkes.each do |section|%>
               <li>
-                <a href="<%=section['section-name'] ? section['section-name'] : '#'%>" class="side_links"><%=section['title'] ? section['title'] : ''%> </a>
+                <a href="#" class="side_links"><%=section['title'] ? section['title'] : ''%> </a>
               </li>
             <%end%>
           </ul>
