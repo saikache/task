@@ -51,7 +51,7 @@
         <%if total_stories > 4%>
           <% @stories['stories'].each_with_index.each do |s, count|%>
             <%if (count != 0 && (count != (total_stories -1)) && (count != (total_stories -2)) && (count != (total_stories -3)))%>
-              <div class="col-lg-3 col-sm-4 col-xs-6 mb-20 bottom_list"> <img class="img-responsive" src="<%= "http://quintype-01.imgix.net/#{s['hero-image-s3-key']}"%>" />
+              <div class="col-lg-2 col-sm-4 col-xs-6 mb-20 bottom_list"> <img class="img-responsive" src="<%= "http://quintype-01.imgix.net/#{s['hero-image-s3-key']}"%>" />
                 <label><a href="#" title="<%=s['headline']%>"> <%=truncate(s['headline'], length: 20)%> </a></label>
                 <br>
                 <label class="text-set pt-10"> <a href="#"><%= s['slug'].split('/').first.upcase %> </a></label>
