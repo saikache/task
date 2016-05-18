@@ -76,38 +76,38 @@
 </html>
 
 <script type="text/javascript">
-$('.side_links').click(function (event){ 
-  event.preventDefault();
-  $('body').css('opacity','0.5')
-  // $('.loader_image').css('display','block')
-  $(".loader_image").show()
-  var stories_by_category = "http://sketches.quintype.com/api/v1/stories?section=" + $(this).attr('href')
-  $.ajax({
-    url: stories_by_category,
-    success: function(response) {
-    $(".list-group").html('')
-    $(".loader_image").hide()
-    $('body').css('opacity','1')
-        var article_html = ''
-        if (response['stories'].length == 0) {
-          $("#my_category").html("No Results Found")
-        }
-        for (i = 0; i < response['stories'].length; i++) {
-          article_html +=  "<div class='col-lg-3 col-xs-6'><div class='panel panel-default'> <li class='list-group-item li_height1'>"
-          article_html += "<img class='image-thumb' src="+ 'http://quintype-01.imgix.net/' +response['stories'][i]['hero-image-s3-key'] +" height='150'>"
-          article_html += "<h5 class='upcase'>" + response['stories'][i]['sections'][0]['name'] +" </h5>"
-          var heading = jQuery.trim(response['stories'][i]['headline']).substring(0, 40).split(" ").join(" ") + "...";
-          article_html   +=  "<div class='heading'><h4 title='"+response['stories'][i]['headline']+"' class=''> " + heading + "</h4></div>"
-          article_html += "<div class='written_by grid_response_author'>"+ response['stories'][i]['author-name'] +"</div>"
-          article_html += "<div class='published_on self_gride_bottom'>" + new Date(response['stories'][i]['last-published-at']) + "</div>"
-          article_html += "</li></div></div>"
-          $("#my_category").html(response['stories'][i]['sections'][0]['name'])
-        }
-        $(".list-group").append(article_html)
-      }
-  })
-  return false;
-});
+// $('.side_links').click(function (event){ 
+//   event.preventDefault();
+//   $('body').css('opacity','0.5')
+//   // $('.loader_image').css('display','block')
+//   $(".loader_image").show()
+//   var stories_by_category = "http://sketches.quintype.com/api/v1/stories?section=" + $(this).attr('href')
+//   $.ajax({
+//     url: stories_by_category,
+//     success: function(response) {
+//     $(".list-group").html('')
+//     $(".loader_image").hide()
+//     $('body').css('opacity','1')
+//         var article_html = ''
+//         if (response['stories'].length == 0) {
+//           $("#my_category").html("No Results Found")
+//         }
+//         for (i = 0; i < response['stories'].length; i++) {
+//           article_html +=  "<div class='col-lg-3 col-xs-6'><div class='panel panel-default'> <li class='list-group-item li_height1'>"
+//           article_html += "<img class='image-thumb' src="+ 'http://quintype-01.imgix.net/' +response['stories'][i]['hero-image-s3-key'] +" height='150'>"
+//           article_html += "<h5 class='upcase'>" + response['stories'][i]['sections'][0]['name'] +" </h5>"
+//           var heading = jQuery.trim(response['stories'][i]['headline']).substring(0, 40).split(" ").join(" ") + "...";
+//           article_html   +=  "<div class='heading'><h4 title='"+response['stories'][i]['headline']+"' class=''> " + heading + "</h4></div>"
+//           article_html += "<div class='written_by grid_response_author'>"+ response['stories'][i]['author-name'] +"</div>"
+//           article_html += "<div class='published_on self_gride_bottom'>" + new Date(response['stories'][i]['last-published-at']) + "</div>"
+//           article_html += "</li></div></div>"
+//           $("#my_category").html(response['stories'][i]['sections'][0]['name'])
+//         }
+//         $(".list-group").append(article_html)
+//       }
+//   })
+//   return false;
+// });
 
 $("#sm_stories").toggleClass("container")
 $("#menu-toggle").click(function(e) {
