@@ -22,7 +22,7 @@
           </div>
         <%end%>
         <%if @stories['stories'].count > 3%>
-          <div class="col-lg-6 col-sm-6 pd-0 side-list-grid">
+          <div class="col-lg-6 col-sm-8 pd-0 side-list-grid">
             <% @stories['stories'].last(3).each do |s|%>
               <div class="vid-list col-lg-12 mb-10">
                 <div class="col-lg-4 col-sm-6 small-video "> <img class="img-responsive" src="<%= "http://quintype-01.imgix.net/#{s['hero-image-s3-key']}"%>" /> </div>
