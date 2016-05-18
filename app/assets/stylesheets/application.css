@@ -14,3 +14,33 @@
  *= require_tree .
  *= require_self
  */
+
+@media all and (min-width:768px) and (max-width:991px) {
+.small-video {
+    height: 95 px;
+    padding-bottom: 0px;
+}
+.vid-list {
+    height: 95px;
+    padding-bottom: 5px;
+}
+.custom-title {
+    left: 15px;
+    top: 10px;
+}
+.up-data {
+    margin-left: 10px !important;
+}
+.notification {
+    display: none
+}
+.fileUpload {
+    margin-left: 10px;
+}
+.logo {
+    padding: 0px !important;
+}
+.side-list-grid { display: none; }
+.bottom_list{color: red;}
+
+}
