@@ -1,3 +1,5 @@
+<h3>Gannn</h3>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,21 +44,15 @@
     <div id="wrapper">
       <div id="sidebar-wrapper">
           <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
-            <% @side_linkes.each do |section|%>
-              <li>
-                <a href="<%=section['section-name'] ? section['section-name'] : ''%>"><%=section['title'] ? section['title'] : ''%> </a>
-              </li>
-            <%end%>
+      
+
           </ul>
       </div>
       <div>
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
-            <% @side_linkes.each do |section|%>
-              <li>
-                <a href="<%=section['section-name'] ? section['section-name'] : '#'%>" class="side_links"><%=section['title'] ? section['title'] : ''%> </a>
-              </li>
-            <%end%>
+    
+    
           </ul>
         </div>
         <div id="page-content-wrapper">
